@@ -1,0 +1,25 @@
+Components:
+I. board
+II. gui
+III. player(s)
+
+I
+class Board {
+	board getJSON()
+	bool placeItem([i, j], black/white)
+}
+
+II
+b := connectToBoard()
+
+for {
+	updateBoard(pollPlayer())
+}
+
+pollPlayer() {
+	p := connectToPlayer()
+	return p.getMove(b.getJSON())
+}
+
+III
+move getMove(json)
